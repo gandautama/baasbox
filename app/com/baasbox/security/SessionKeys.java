@@ -20,7 +20,7 @@ package com.baasbox.security;
 
 public enum SessionKeys {
 	TOKEN ("X-BB-SESSION"),
-	APP_CODE ("X-BAASBOX-APPCODE"),
+	APP_CODE ("X-SBAAS-APPCODE"),
 	USERNAME ("USERNAME"),
 	PASSWORD ("PASSWORD"),
 	START_TIME ("START_TIME"),

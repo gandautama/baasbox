@@ -4,8 +4,8 @@
 		tours["general"].addStep({
 			element: ".brand", 
 			placement: "right",
-			title: "Welcome to BAASBOX", 
-			content: "This is a short tour to give you a first overview of the BaasBox administrative console.<br />" +
+			title: "Welcome to SBaaS", 
+			content: "This is a short tour to give you a first overview of the SBaaS administrative console.<br />" +
 					"At any time you can exit this tour by clicking on the 'End tour' link at the bottom of this dialog. <br />" +
 					"Ready? Let's start..."
 		});
@@ -14,7 +14,7 @@
 			element: ".navbar-inner",
 			placement: "bottom",
 			title: "The Console",
-			content: "This is the BaasBox Console. From this web application you can perform many administrative and configuration tasks <br>"
+			content: "This is the SBaaS Console. From this web application you can perform many administrative and configuration tasks <br>"
 		});
 				
 		tours["general"].addStep({
