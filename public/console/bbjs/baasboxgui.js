@@ -2010,7 +2010,7 @@ function callMenu(action){
 					changeTopBarLink(bbId);
 				}
 
-				$('#latestNewsTab').rssfeed('http://www.baasbox.com/feed/', {
+				$('#latestNewsTab').rssfeed('http://www.sbaas.com/feed/', {
 					header: false,
 					dateformat: "date",
 					content:true,
@@ -2024,7 +2024,7 @@ function callMenu(action){
 				var serverPlatform=getPlatform(data["os"]["os_name"]);
 				var serverPlatformLabel=data["os"]["os_name"]=="cloud"?"BaasBox as a Service": "BaasBox on " + data["os"]["os_name"] 
 				$('#platformNameNews').text(serverPlatformLabel);
-				$('#platformNewsTab').rssfeed('http://www.baasbox.com/tag/'+serverPlatform+'/feed/?' + $.param(platformSpecificFeed,true),
+				$('#platformNewsTab').rssfeed('http://www.sbaas.com/tag/'+serverPlatform+'/feed/?' + $.param(platformSpecificFeed,true),
 						{
 					header: false,
 					dateformat: "date",

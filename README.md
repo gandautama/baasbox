@@ -3,7 +3,7 @@ BaasBox
 
 BaasBox is an Open Source project that aims to provide a general purpose back end for mobile and web apps.
 
-Further information can be found at [www.baasbox.com](http://www.baasbox.com/ "BaasBox site").
+Further information can be found at [www.sbaas.com](http://www.sbaas.com/ "BaasBox site").
 
 Build BaasBox
 -------------

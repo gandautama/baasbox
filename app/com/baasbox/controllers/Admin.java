@@ -581,7 +581,7 @@ public class Admin extends Controller {
 	}
 
 	public static Result getLatestVersion() {
-		String urlToCall="http://www.baasbox.com/version/"+ Internal.INSTALLATION_ID.getValueAsString() + "/";
+		String urlToCall="http://www.sbaas.com/version/"+ Internal.INSTALLATION_ID.getValueAsString() + "/";
 		if (Logger.isDebugEnabled()) Logger.debug("Calling " + urlToCall);
 		try{
 			final Promise<Response> promise = WS.url(urlToCall).get();

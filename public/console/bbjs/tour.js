@@ -53,6 +53,6 @@
 			placement: "bottom",
 			title: "That's all", 
 			content: "Now what would you like to do?<br />" +
-                "Check the <a href='http://www.baasbox.com/tutorial' target='_blank'>tutorial</a> section"
+                "Check the <a href='http://www.sbaas.com/tutorial' target='_blank'>tutorial</a> section"
 		});
 	

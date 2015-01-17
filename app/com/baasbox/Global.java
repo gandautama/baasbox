@@ -206,7 +206,7 @@ public class Global extends GlobalSettings {
 	    info("");
 	    info("To login into the administration console go to http://" + address +":" + port + "/console");
 	    info("Default credentials are: user:admin pass:admin AppCode: " + BBConfiguration.getAPPCODE());
-	    info("Documentation is available at http://www.baasbox.com/documentation");
+	    info("Documentation is available at http://www.sbaas.com/documentation");
 		debug("Global.onStart() ended");
 	    info("BaasBox is Ready.");
 	  }
