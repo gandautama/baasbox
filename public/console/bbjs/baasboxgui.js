@@ -1979,7 +1979,7 @@ function callMenu(action){
 				}
 			}, //success
 			error: function(data){
-				$('#latestVersion').addClass("red").text("Unable to reach BaasBox site");
+				$('#latestVersion').addClass("red").text("Unable to reach SBaaS site");
 				$('#notificationLatestVersion').text("?");
 				$('#notificationLatestVersion').addClass("notification yellow");
 			}
