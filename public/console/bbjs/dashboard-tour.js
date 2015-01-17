@@ -4,8 +4,8 @@
 		generalTour.addStep({
 			element: ".brand", 
 			placement: "right",
-			title: "Welcome to BAASBOX", 
-			content: "This is a short tour to give you a first overview of the BaasBox administrative console.<br /> "  
+			title: "Welcome to SBAAS", 
+			content: "This is a short tour to give you a first overview of the SBAAS administrative console.<br /> "  
 						+"At any time you can exit from this tour by clicking on the 'End tour' link at the bottom of this dialog. <br />"
 						+"Ready? Let's start...<br>"
 		});
@@ -14,7 +14,7 @@
 			element: ".navbar-inner",
 			placement: "bottom",
 			title: "The Console",
-			content: "This is the BaasBox Console. From this web application you can perform many administrative and configuration tasks <br>"
+			content: "This is the SBAAS Console. From this web application you can perform many administrative and configuration tasks <br>"
 		});
 				
 		generalTour.addStep({
@@ -50,6 +50,6 @@
 			element: ".navbar-inner #currentVersion", 
 			placement: "bottom",
 			title: "That's all", 
-			content: "This rapid tour is finished. Now you are encouraged to explore each item of the menu, see the related tours, read the online documentation and build your first BAASBOX powered App.<br>"
+			content: "This rapid tour is finished. Now you are encouraged to explore each item of the menu, see the related tours, read the online documentation and build your first SBAAS powered App.<br>"
 		});
 	
