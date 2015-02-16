@@ -110,12 +110,13 @@ public class Global extends GlobalSettings {
 			  Orient.instance().startup();
 			  ODatabaseDocumentTx db = null;
 			  try{
-				db =  Orient.instance().getDatabaseFactory().createDatabase("graph", "plocal:" + config.getString(BBConfiguration.DB_PATH) );
-				if (!db.exists()) {
+				//db =  Orient.instance().getDatabaseFactory().createDatabase("graph", "plocal:" + config.getString(BBConfiguration.DB_PATH) );
+				db =  Orient.instance().getDatabaseFactory(). createDatabase("graph", "remote:127.0.0.1/baasbox root 123123" );
+//				if (!db.exists()) {
 					info("DB does not exist, BaasBox will create a new one");
-					db.create();
+//					db.create();
 					justCreated  = true;
-				}
+//				}
 			  } catch (Throwable e) {
 					error("!! Error initializing BaasBox!", e);
 					error(ExceptionUtils.getFullStackTrace(e));
@@ -143,7 +144,7 @@ public class Global extends GlobalSettings {
 	    	if (justCreated){
 		    	try {
 		    		//we MUST use admin/admin because the db was just created
-		    		db = DbHelper.open( BBConfiguration.getAPPCODE(),"admin", "admin");
+		    		db = DbHelper.openUrl("remote:127.0.0.1/baasbox", BBConfiguration.getAPPCODE(),"root", "123123");
 		    		DbHelper.setupDb();
 			    	info("Initializing session manager");
 			    	ISessionTokenProvider stp = SessionTokenProvider.getSessionTokenProvider();
@@ -162,9 +163,9 @@ public class Global extends GlobalSettings {
 	    	error("Abnormal BaasBox termination.");
 	    	System.exit(-1);
 	    }
-    	info("Updating default users passwords...");
+    	info("Updating default users passwords...");/*
     	try {
-    		db = DbHelper.open( BBConfiguration.getAPPCODE(), BBConfiguration.getBaasBoxAdminUsername(), BBConfiguration.getBaasBoxAdminPassword());
+    		db = DbHelper.openUrl("remote:127.0.0.1/baasbox", BBConfiguration.getAPPCODE(), BBConfiguration.getBaasBoxAdminUsername(), BBConfiguration.getBaasBoxAdminPassword());
     		DbHelper.evolveDB(db);
 			DbHelper.updateDefaultUsers();
 			
@@ -180,7 +181,7 @@ public class Global extends GlobalSettings {
     	}
     	
     	try{
-    		db = DbHelper.open( BBConfiguration.getAPPCODE(), BBConfiguration.getBaasBoxAdminUsername(), BBConfiguration.getBaasBoxAdminPassword());
+    		db = DbHelper.openUrl("remote:127.0.0.1/baasbox", BBConfiguration.getAPPCODE(), BBConfiguration.getBaasBoxAdminUsername(), BBConfiguration.getBaasBoxAdminPassword());
     		IosCertificateHandler.init();
     	}catch (Exception e) {
 	    	error("!! Error initializing BaasBox!", e);
@@ -189,7 +190,8 @@ public class Global extends GlobalSettings {
 		} finally {
     		if (db!=null && !db.isClosed()) db.close();
     	}
-    	info ("...done");
+    	*/
+	info ("...done");
     	
     	overrideSettings();
     	

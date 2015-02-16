@@ -359,6 +359,26 @@ public class DbHelper {
 		return getConnection();
 	}
 
+      public static ODatabaseRecordTx openUrl(String url, String appcode, String username,String password) throws InvalidAppCodeException {
+		if (appcode==null || !appcode.equals(BBConfiguration.configuration.getString(BBConfiguration.APP_CODE)))
+                        throw new InvalidAppCodeException("Authentication info not valid or not provided: " + appcode + " is an Invalid App Code");
+                if(dbFreeze.get()){
+                        throw new ShuttingDownDBException();
+                }
+                String databaseName=BBConfiguration.getDBDir();
+                if (Logger.isDebugEnabled()) Logger.debug("opening connection on db: " + databaseName + " for " + username);
+
+                ODatabaseDocumentTx conn = new ODatabaseDocumentTx(url);
+                conn.open(username,password);
+                HooksManager.registerAll(getConnection());
+                DbHelper.appcode.set(appcode);
+                DbHelper.username.set(username);
+                DbHelper.password.set(password);
+
+                return getConnection();
+        }
+
+
     public static boolean isConnectedAsAdmin(boolean excludeInternal){
         OUser user = getConnection().getUser();
         Set<ORole> roles = user.getRoles();
